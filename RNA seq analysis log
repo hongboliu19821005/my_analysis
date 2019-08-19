@@ -47,7 +47,7 @@ for file in SRR504349*_1.fastq; do echo ${file%_*}; trimmomatic PE ${file%_*}_1.
 ## {base%.*} is to delete the every str(*) rightside of "." in base
 python3 get_trim_report.py          ##script for summarize the trimming report for all file, output .csv file
 ##single end reads
-#for f in SRR557230*.fastq; do echo ${f%_*}; trimmomatic SE $f ${f%.*}.fq.gz ILLUMINACLIP:/ufrc/wang/luoziliang/nodulation/rnaseq/adapters.fasta:2:30:20 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50; done
+#for f in SRR557230*.fastq; do echo ${f%_*}; trimmomatic SE $f ${f%.*}.fq.gz ILLUMINACLIP:/ufrc/wang/hongbo.liu/sugarcan_xingping/sra/Trimmomatic-Src-0.39/trimmomatic-0.39/adapters/adapters.fasta:2:30:20 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50; done
 
 ##parameters for the trimming
 	•	LLUMINACLIP: Cut adapter and other illumina-specific sequences from the read.

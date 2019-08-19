@@ -32,7 +32,7 @@ mkdir FastQC
 cp get_fastqc.py ./FastQC   ##script for get the QC summary for all files
 fastqc *.fastq -o FastQC
 python3 ./FastQC/get_fastqc.py
-module load gcc
+module load gcc/5.2.0
 #requirement for multiqc
 module load multiqc
 cd FastQC_after_trim

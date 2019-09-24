@@ -29,7 +29,7 @@ for f in ./*.sra; do fastq-dump --skip-technical  --readids --dumpbase --split-f
 module load  fastqc
 module load python3
 mkdir FastQC
-cp get_fastqc.py ./FastQC   ##script for get the QC summary for all files
+cp get_fastqc.py ./FastQC   ##script for get the QC summary for all files# #将上一个文件夹的get_fastqc.py 文件以相同文件名和文件内容拷贝到winSCP 的FastQC文件夹种#
 fastqc *.fastq -o FastQC
 python3 ./FastQC/get_fastqc.py
 module load gdal/2.1.0
